@@ -1,0 +1,258 @@
+
+:root {
+    --discord-purple: #5865F2; 
+    --dark-bg-primary: #2C2F33; 
+    --dark-bg-secondary: #23272A; 
+    --text-white: #FFFFFF;
+    --text-light-grey: #99AAB5;
+    --btn-dark: #23272A;
+    --btn-light: #F6F6F6;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+    line-height: 1.6;
+    color: var(--text-white);
+    background-color: var(--dark-bg-secondary); 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+
+.hero-section {
+    background-color: var(--discord-purple);
+    background-image: url('./CAPA.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-white);
+    text-align: center;
+    padding: 40px 20px 80px; /* Mais padding no fundo para ilustrações */
+    position: relative; /* Para posicionar ilustrações */
+    overflow: hidden; /* Garante que ilustrações extras não causem scroll */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-section h1 {
+    font-family: Luckiest Guy;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-family: Open Sans, sans-serif;
+    font-size: 0.5rem;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* Botões empilhados em mobile */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-download {
+    background-color: var(--text-white);
+    color: var(--dark-bg-primary);
+}
+
+.btn-download:hover {
+    color: var(--discord-purple);
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.btn-download img {
+    height: 1.2em; /* Tamanho do ícone de download */
+    width: auto;
+    display: inline-block; /* Alinha o ícone com o texto */
+    vertical-align: middle;
+}
+
+.btn-browser {
+    background-color: var(--dark-bg-primary);
+    color: var(--text-white);
+}
+
+.btn-browser:hover {
+    background-color: var(--dark-bg-secondary);
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.hero-background-illustration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Adapte conforme a sua imagem */
+    height: 100%; /* Adapte conforme a sua imagem */
+    background-image: url('assets/hero-illustration-main.svg'); /* Substitua pela ilustração principal de fundo */
+    background-size: contain; /* Ou cover, dependendo da imagem */
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    z-index: 1;
+    /* Ajuste a altura e posição para que as "nuvens" ou "montanhas" apareçam corretamente */
+}
+
+
+/* --------------------
+   Content Sections
+   -------------------- */
+.content-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column; /* Empilha em mobile */
+    align-items: center;
+    text-align: center;
+    gap: 40px; /* Espaço entre imagem e texto */
+}
+
+/* Cores de fundo alternadas para as seções */
+.feature-create-space,
+.feature-for-everyone {
+    background-color: var(--text-white);
+    color: var(--dark-bg-primary);
+}
+
+.feature-easy-to-find,
+.feature-reliable-tech {
+    background-color: var(--dark-bg-primary);
+    color: var(--text-white);
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho da imagem em mobile */
+}
+
+/* Última seção com texto em cima e imagem em baixo */
+.feature-reliable-tech .section-text.full-width-text {
+    max-width: 800px; /* Permite que o texto ocupe mais largura */
+}
+
+.feature-reliable-tech .section-image.full-width-image {
+    max-width: 800px; /* Permite que a imagem ocupe mais largura */
+}
+
+/* --------------------
+   Footer
+   -------------------- */
+footer {
+    background-color: var(--dark-bg-secondary); /* Ou a cor do fundo geral */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin: 0 auto; /* Centraliza a logo */
+}
+
+/* --------------------
+   Responsividade (Desktop)
+   -------------------- */
+@media (min-width: 768px) {
+    /* Header */
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row; /* Botões lado a lado em desktop */
+    }
+
+    /* Content Sections */
+    .content-section {
+        flex-direction: row; /* Imagem e texto lado a lado */
+        text-align: left;
+        padding: 80px 40px;
+        gap: 80px;
+    }
+
+    .content-section:nth-child(even) { /* Inverte a ordem para seções pares */
+        flex-direction: row-reverse;
+    }
+
+    .section-image,
+    .section-text {
+        flex: 1; /* Distribui o espaço igualmente */
+        max-width: none; /* Remove a limitação de largura para que flex:1 funcione */
+    }
+
+    .content-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .content-section p {
+        font-size: 1.25rem;
+        margin: 0; /* Remove margin auto */
+    }
+
+    /* Última seção com layout diferente */
+    .feature-reliable-tech {
+        flex-direction: column; /* Volta a empilhar */
+        text-align: center;
+    }
+
+    .feature-reliable-tech .section-text.full-width-text,
+    .feature-reliable-tech .section-image.full-width-image {
+        flex: none; /* Remove flex para que ocupem 100% da largura */
+        width: 100%;
+    }
+}
+
+/* @media (min-width: 1024px) {
+    // Ajustes para telas maiores, se necessário
+    .content-section {
+        padding: 100px 60px;
+    }
+} */
