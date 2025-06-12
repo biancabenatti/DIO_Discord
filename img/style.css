@@ -37,9 +37,9 @@ img {
     background-position: center;
     color: var(--text-white);
     text-align: center;
-    padding: 40px 20px 80px; /* Mais padding no fundo para ilustrações */
-    position: relative; /* Para posicionar ilustrações */
-    overflow: hidden; /* Garante que ilustrações extras não causem scroll */
+    padding: 40px 20px 80px; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 .hero-content {
@@ -67,7 +67,7 @@ img {
 
 .hero-buttons {
     display: flex;
-    flex-direction: column; /* Botões empilhados em mobile */
+    flex-direction: column; 
     gap: 15px;
     justify-content: center;
     align-items: center;
@@ -97,9 +97,9 @@ img {
 }
 
 .btn-download img {
-    height: 1.2em; /* Tamanho do ícone de download */
+    height: 1.2em; 
     width: auto;
-    display: inline-block; /* Alinha o ícone com o texto */
+    display: inline-block; 
     vertical-align: middle;
 }
 
@@ -117,30 +117,25 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Adapte conforme a sua imagem */
-    height: 100%; /* Adapte conforme a sua imagem */
-    background-image: url('assets/hero-illustration-main.svg'); /* Substitua pela ilustração principal de fundo */
-    background-size: contain; /* Ou cover, dependendo da imagem */
+    width: 100%; 
+    height: 100%; 
+    background-image: url('assets/hero-illustration-main.svg'); 
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: bottom center;
     z-index: 1;
-    /* Ajuste a altura e posição para que as "nuvens" ou "montanhas" apareçam corretamente */
+ 
 }
 
-
-/* --------------------
-   Content Sections
-   -------------------- */
 .content-section {
     padding: 60px 20px;
     display: flex;
-    flex-direction: column; /* Empilha em mobile */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
-    gap: 40px; /* Espaço entre imagem e texto */
+    gap: 40px; 
 }
 
-/* Cores de fundo alternadas para as seções */
 .feature-create-space,
 .feature-for-everyone {
     background-color: var(--text-white);
@@ -167,37 +162,30 @@ img {
 
 .section-image {
     width: 100%;
-    max-width: 500px; /* Limita o tamanho da imagem em mobile */
-}
+    max-width: 500px; 
 
-/* Última seção com texto em cima e imagem em baixo */
+
 .feature-reliable-tech .section-text.full-width-text {
-    max-width: 800px; /* Permite que o texto ocupe mais largura */
+    max-width: 800px; 
 }
 
 .feature-reliable-tech .section-image.full-width-image {
-    max-width: 800px; /* Permite que a imagem ocupe mais largura */
+    max-width: 800px; 
 }
 
-/* --------------------
-   Footer
-   -------------------- */
 footer {
-    background-color: var(--dark-bg-secondary); /* Ou a cor do fundo geral */
+    background-color: var(--dark-bg-secondary);
     padding: 40px 20px;
     text-align: center;
 }
 
 .footer-logo {
     max-width: 150px;
-    margin: 0 auto; /* Centraliza a logo */
+    margin: 0 auto; 
 }
 
-/* --------------------
-   Responsividade (Desktop)
-   -------------------- */
 @media (min-width: 768px) {
-    /* Header */
+
     .hero-section h1 {
         font-size: 3.5rem;
     }
@@ -207,25 +195,25 @@ footer {
     }
 
     .hero-buttons {
-        flex-direction: row; /* Botões lado a lado em desktop */
+        flex-direction: row; 
     }
 
-    /* Content Sections */
+   
     .content-section {
-        flex-direction: row; /* Imagem e texto lado a lado */
+        flex-direction: row; 
         text-align: left;
         padding: 80px 40px;
         gap: 80px;
     }
 
-    .content-section:nth-child(even) { /* Inverte a ordem para seções pares */
+    .content-section:nth-child(even) { 
         flex-direction: row-reverse;
     }
 
     .section-image,
     .section-text {
-        flex: 1; /* Distribui o espaço igualmente */
-        max-width: none; /* Remove a limitação de largura para que flex:1 funcione */
+        flex: 1;
+        max-width: none; 
     }
 
     .content-section h2 {
@@ -234,25 +222,18 @@ footer {
 
     .content-section p {
         font-size: 1.25rem;
-        margin: 0; /* Remove margin auto */
+        margin: 0; 
     }
 
-    /* Última seção com layout diferente */
+  
     .feature-reliable-tech {
-        flex-direction: column; /* Volta a empilhar */
+        flex-direction: column; 
         text-align: center;
     }
 
     .feature-reliable-tech .section-text.full-width-text,
     .feature-reliable-tech .section-image.full-width-image {
-        flex: none; /* Remove flex para que ocupem 100% da largura */
+        flex: none; 
         width: 100%;
     }
-}
-
-/* @media (min-width: 1024px) {
-    // Ajustes para telas maiores, se necessário
-    .content-section {
-        padding: 100px 60px;
-    }
-} */
+}}
