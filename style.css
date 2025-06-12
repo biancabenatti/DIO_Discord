@@ -29,7 +29,7 @@ img {
 
 .hero-section {
     background-color: var(--discord-purple);
-    background-image: url('./CAPA.png');
+    background-image: url('./img/CAPA.png');
     background-size: cover;
     background-position: center;
     color: var(--text-white);
